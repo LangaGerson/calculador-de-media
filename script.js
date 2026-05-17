@@ -27,16 +27,21 @@ function calcular(){
         num1=Number(ac1.value)
         num2=Number(ac2.value)
         nump=Number(acp.value)
-        var media = (((num1 + num2)/2)+nump)/2
-        tela.innerHTML =(`A sua média é ${media.toFixed(2)}`)
+        if(num1< 0||num1> 20 ||num2<0 || num2>20|| nump<0||nump>20){
+            alert("Por favor, introduza notas validas de 0 a 20!")
+        }else{
+            var media = (((num1 + num2)/2)+nump)/2
+            tela.innerHTML =(`A sua média é ${media.toFixed(2)}`)
 
-        if(media>= 10){
-            tela2.innerHTML =(`Aprovado`)
-            tela2.style.color= "green"
-        } else{
-            tela2.innerHTML =(`Reprovado`)
-            tela2.style.color= "red"
+            if(media>= 10){
+                tela2.innerHTML =(`Aprovado`)
+                tela2.style.color= "green"
+            } else{
+                tela2.innerHTML =(`Reprovado`)
+                tela2.style.color= "red"
+            }
         }
+        
     }
     
 
