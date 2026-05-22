@@ -8,7 +8,7 @@ Preencha as Notas: Insira as suas notas nos campos indicados:
 2ª ACS: Nota da segunda Avaliação Contínua Sistemática.
 AP: Nota da Avaliação Periódica.
 Clique em Calcular: Depois de preencher todos os campos, clique no botão Calcular.
-Confira o Resultado: O sistema fará a soma das duas notas das ACS e dividirá por dois,e somará com a nota da AP e dividirá por 2 e exibirá a sua média final na tela com uma resposta visual imediata.
+Confira o Resultado: O sistema fará a soma das duas notas das ACS e dividirá por dois,e somará a media das ACS multiplicada por 2 e somará com a nota da AP e dividirá por 3 e exibirá a sua média final na tela com uma resposta visual imediata.
 🎨 Entenda o Resultado Visual:
 O sistema utiliza cores inteligentes para que você saiba a sua situação num piscar de olhos:
 🟢 Texto em Verde (Média > 10.0): Significa que você foi APROVADO! Parabéns pelo esforço e continue mantendo o foco nos estudos.
@@ -30,7 +30,7 @@ function calcular(){
         if(num1< 0||num1> 20 ||num2<0 || num2>20|| nump<0||nump>20){
             alert("Por favor, introduza notas validas de 0 a 20!")
         }else{
-            var media = (((num1 + num2)/2)+nump)/2
+            var media = ((2*(num1 + num2)/2)+nump)/3
             tela.innerHTML =(`A sua média é ${media.toFixed(2)}`)
 
             if(media>= 10){
